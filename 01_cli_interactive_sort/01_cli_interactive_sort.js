@@ -50,31 +50,26 @@ function sorting(array, num) {
 
   switch (num) {
     case "1":
-      //Sort words alphabetically
       console.log(array.filter((el) => typeof el === "string").sort());
       break;
 
     case "2":
-      //Show numbers from lesser to greater
       console.log(
         array.filter((el) => typeof el === "number").sort((a, b) => a - b)
       );
       break;
 
     case "3":
-      //Show numbers from bigger to smaller
       console.log(
         array.filter((el) => typeof el === "number").sort((a, b) => b - a)
       );
       break;
 
     case "4":
-      //Display words in ascending order by number of letters in the word
       console.log(arrayOfStrings.sort((a, b) => a.length - b.length));
       break;
 
     case "5":
-      //Show only unique words
       const uniqueWords = [];
       for (const value of arrayOfStrings) {
         if (!uniqueWords.includes(value)) {
@@ -85,7 +80,6 @@ function sorting(array, num) {
       break;
 
     case "6":
-      //Display only unique values from the set of words and numbers entered by the user
       const uniqueValue = [];
       for (const value of array) {
         if (!uniqueValue.includes(value)) {
