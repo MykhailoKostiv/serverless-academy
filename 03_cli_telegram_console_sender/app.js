@@ -9,22 +9,20 @@ program
   .command("message <message>")
   .description("Send message")
   .alias("m")
-  .action((msg) => {
-    getChatId().then(async (chatId) => {
-      await bot.sendMessage(chatId, msg);
-      process.exit();
-    });
+  .action(async (msg) => {
+    const chatId = await getChatId();
+    await bot.sendMessage(chatId, msg);
+    process.exit();
   });
 
 program
   .command("photo <path>")
   .description("Send photo")
   .alias("p")
-  .action((path) => {
-    getChatId().then(async (chatId) => {
-      await bot.sendPhoto(chatId, path);
-      process.exit();
-    });
+  .action(async (path) => {
+    const chatId = await getChatId();
+    await bot.sendPhoto(chatId, path);
+    process.exit();
   });
 
 program.parse(process.argv);
