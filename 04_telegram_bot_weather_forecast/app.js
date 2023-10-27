@@ -101,7 +101,7 @@ async function getInterval(data) {
       };
       weatherOneDayData.push(necessaryData);
     });
-    console.log(weatherFullData);
+
     return weatherOneDayData;
   }
 }
