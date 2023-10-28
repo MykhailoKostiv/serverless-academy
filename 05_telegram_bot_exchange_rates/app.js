@@ -1,7 +1,7 @@
 const axios = require("axios");
 const TelegramBot = require("node-telegram-bot-api");
 const NodeCache = require("node-cache");
-const token = "6478706824:AAHp7832tUTuxkGFSIVtQLzkvSHF30_miLs";
+const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 const myCache = new NodeCache();
 
