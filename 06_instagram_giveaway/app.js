@@ -26,8 +26,8 @@ function existInAll() {
   for (let i = 1; i < usernamesInFiles.usernamesInFiles.length; i++) {
     commonUsernames = new Set(
       [...commonUsernames].filter((username) =>
-        usernamesInFiles.usernamesInFiles[i].has(username)
-      )
+        usernamesInFiles.usernamesInFiles[i].has(username),
+      ),
     );
   }
   return commonUsernames.size;

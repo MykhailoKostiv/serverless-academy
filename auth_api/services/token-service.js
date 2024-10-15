@@ -44,7 +44,7 @@ class TokenService {
     const refreshToken = this.signToken(
       refreshTokenPayload,
       process.env.JWT_SECRET,
-      process.env.REFRESH_TOKEN_TTL
+      process.env.REFRESH_TOKEN_TTL,
     );
     return refreshToken;
   }

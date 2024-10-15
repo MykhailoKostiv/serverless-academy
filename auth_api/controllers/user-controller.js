@@ -24,7 +24,7 @@ class UserController {
       const accessToken = TokenService.signToken(
         { userId: user.user_id },
         process.env.JWT_SECRET,
-        process.env.REFRESH_TOKEN_TTL
+        process.env.REFRESH_TOKEN_TTL,
       );
       const refreshToken = TokenService.signRefreshToken(user.user_id);
 
@@ -53,7 +53,7 @@ class UserController {
       const accessToken = TokenService.signToken(
         { userId },
         process.env.JWT_SECRET,
-        process.env.ACCESS_TOKEN_TTL
+        process.env.ACCESS_TOKEN_TTL,
       );
       const refreshToken = TokenService.signRefreshToken(userId);
 

@@ -56,10 +56,10 @@ async function getCurrency(currency) {
 
   try {
     const privatCurrency = await axios.get(
-      "https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5"
+      "https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5",
     );
     const monoCurrency = await axios.get(
-      "https://api.monobank.ua/bank/currency"
+      "https://api.monobank.ua/bank/currency",
     );
 
     await monoCurrency.data.map((el) => {

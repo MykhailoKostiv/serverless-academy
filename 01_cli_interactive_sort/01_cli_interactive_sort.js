@@ -38,10 +38,10 @@ function input() {
             } else {
               input();
             }
-          }
+          },
         );
       }
-    }
+    },
   );
 }
 
@@ -55,13 +55,13 @@ function sorting(array, num) {
 
     case "2":
       console.log(
-        array.filter((el) => typeof el === "number").sort((a, b) => a - b)
+        array.filter((el) => typeof el === "number").sort((a, b) => a - b),
       );
       break;
 
     case "3":
       console.log(
-        array.filter((el) => typeof el === "number").sort((a, b) => b - a)
+        array.filter((el) => typeof el === "number").sort((a, b) => b - a),
       );
       break;
 
